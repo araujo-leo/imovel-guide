@@ -124,9 +124,9 @@ header img {
     background-color: #FFF;
     border: 1.5px solid var(--cor-terciaria);
     border-radius: 5px;
-    width: 350px;
+    width: 380px;
     height: 380px;
-    margin: 10px 40px;
+    margin: 80px 40px 0 40px;
     display: flex;
     gap: 10px;
     flex-direction: column;
@@ -135,6 +135,8 @@ header img {
     color: white;
     font-weight: bold;
 }
+
+
 
 .corretores {
     padding: 10px;
@@ -246,7 +248,7 @@ textarea::placeholder {
 
 
 #forms-regra-de-tres input {
-    width: 120px;
+    width: 135px;
     border: 1px solid var(--cor-terciaria);
     border-radius: 5px;
     padding: 10px;
@@ -276,10 +278,54 @@ textarea::placeholder {
     background-color: black;
 }
 
+#foto-casa {
+    width: 100%;
+    height: 380px;
+    border: 1.5px solid var(--cor-terciaria);
+    border-radius: 5px;
+}
+
+#foto-casa img {
+    width: 100%;
+    height: 380px;
+    border-radius: 5px;
+}
+
+.quadrado-casa {
+    background-color: #FFF;
+    border-radius: 5px;
+    width: 380px;
+    height: 450px;
+    margin: 80px 40px 0 40px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.quadrado-casa button {
+    height: 40px;
+    width: 380px;
+    background-color: var(--cor-secundaria);
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: auto;
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    align-self: flex-start;
+    font-weight: 400;
+}
 
 
 
-#menu-icon, #close-icon {
+
+
+#menu-icon,
+#close-icon {
     display: none;
     font-size: 2rem;
     cursor: pointer;
@@ -288,7 +334,7 @@ textarea::placeholder {
     top: 0;
     right: 0;
     margin: 2rem;
-    z-index: 200; 
+    z-index: 200;
 }
 
 
@@ -305,12 +351,13 @@ textarea::placeholder {
     padding-top: 5rem;
     padding-left: 3rem;
     gap: 2rem;
-    z-index: 100; 
+    z-index: 100;
 }
 
 .footer {
     background-color: var(--cor-principal);
     color: #fff;
+    margin-top: 80px;
     padding: 2rem 5%;
     position: relative;
     display: flex;
@@ -348,10 +395,83 @@ textarea::placeholder {
 }
 
 .footer-image {
-    width: 120px; 
+    width: 120px;
     height: auto;
 }
 
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100svh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-conteudo {
+    background-color: #fefefe;
+    margin: 5% auto;
+    border: 1px solid var(--cor-terciaria);
+    width: 80%;
+    height: 80%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    height: 50px;
+    border-bottom: 1px black solid;
+    padding: 20px 20px 40px 0;
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.5); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+.modal-body {
+    height: 70svh;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60svh;
+    width: 40svw;
+    overflow: hidden;
+    position: relative;
+}
+
+.modal-body img {
+    width: 40svw;
+    border-radius: 5px;
+    animation: zoomOut 2s ease-out;
+    position: absolute; 
+}
+
+.fechar {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
 @media (max-width: 1200px) {
@@ -375,7 +495,7 @@ textarea::placeholder {
         display: flex;
     }
 
-    .quadrado{
+    .quadrado {
         margin: 10px;
     }
 
@@ -389,6 +509,16 @@ textarea::placeholder {
         width: 120px;
     }
 
+    .quadrado-casa {
+        margin: 0px;
+        padding: 5px;
+    }
+
+    .quadrado-casa button {
+        margin: 0;
+        width: 370px;
+    }
+
     .footer-content {
         flex-direction: column;
         align-items: flex-start;
@@ -396,7 +526,7 @@ textarea::placeholder {
     }
 
     .footer-left {
-        display: none; /* Esconde os links na tela menor */
+        display: none;
     }
 
     .footer-right {
@@ -413,7 +543,27 @@ textarea::placeholder {
     }
 
     .footer-right .footer-image {
-        width: 100px; 
+        width: 100px;
         height: auto;
     }
+
+    .modal {
+        height: 100svh;
+    }
+
+    .modal-conteudo{
+        margin-top: 20rem;
+        height: 40svh;
+    }
+
+    .modal-body{
+        width: 60svw;
+    }
+
+    .modal-body img{
+        width: 70svw;
+        border-radius: 5px;
+    }
+
 }
+

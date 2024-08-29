@@ -2,36 +2,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputCPF = document.querySelector('#cpf');
     const inputTelefone = document.querySelector('#telefone');
 
-    inputCPF.addEventListener('keypress', ()=>{
+    inputCPF.addEventListener('keypress', () => {
         let inputLenght = inputCPF.value.length;
-    
+
         console.log(inputLenght);
-    
-        if(inputLenght === 3 || inputLenght === 7){
+
+        if (inputLenght === 3 || inputLenght === 7) {
             inputCPF.value += '.';
-        }else if(inputLenght === 11){
+        } else if (inputLenght === 11) {
             inputCPF.value += '-';
         }
-        
+
     })
-    
+
     inputTelefone.addEventListener('keypress', () => {
         let inputLength = inputTelefone.value.length;
-    
+
         if (inputLength === 1) {
             inputTelefone.value = '(' + inputTelefone.value;
         }
-    
+
         if (inputLength === 3) {
             inputTelefone.value += ') ';
         }
-    
+
         if (inputLength === 9) {
             inputTelefone.value += '-';
         }
-    
-    
-    });	
+
+
+    });
 
     function calcularRegraDeTres() {
         const inputs = document.querySelectorAll('#forms-regra-de-tres input');
@@ -71,17 +71,44 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuIcon && navbarMobile) {
         menuIcon.addEventListener('click', () => {
             navbarMobile.classList.add('active');
-            closeIcon.style.display = "block"; 
-            menuIcon.style.display = "none"; 
+            closeIcon.style.display = "block";
+            menuIcon.style.display = "none";
         });
 
         closeIcon.addEventListener('click', () => {
             navbarMobile.classList.remove('active');
-            closeIcon.style.display = "none"; 
+            closeIcon.style.display = "none";
             menuIcon.style.display = "block";
         });
     }
+
+
+
+    const modal = document.getElementById('modal');
+    const btnAbrir = document.getElementById('abrirModal');
+    const spanFechar = document.getElementsByClassName('fechar')[0];
+    const modalImage = modal.querySelector('img'); 
+
+    btnAbrir.onclick = function () {
+        modal.style.display = 'block';
+        modalImage.classList.add('animate-zoom'); 
+    }
+
+    spanFechar.onclick = function () {
+        modal.style.display = 'none';
+        modalImage.classList.remove('animate-zoom'); 
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+            modalImage.classList.remove('animate-zoom'); 
+        }
+    }
 });
+
+
+
 
 
 
