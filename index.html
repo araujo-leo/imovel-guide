@@ -1,94 +1,116 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+    <!DOCTYPE html>
+    <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css">
 
-<body>
-    <header class="header">
-        <a href="#" class="logo"><img src="logo-imovel-guide.webp" alt=""></a>
+    </head>
 
-        <i class="bx bx-menu" id="menu-icon"></i>
-
-        <nav class="navbar">
-            <div class="teste">
+    <body>
+        <header class="header">
+            <a href="#" class="logo"><img src="logo-imovel-guide.webp" alt=""></a>
+    
+            <div class="menu-container">
+                <i class="bx bx-menu" id="menu-icon"></i>
+                <i class='bx bx-x' id="close-icon"></i>
+            </div>
+    
+            <nav class="navbar">
+                <div class="teste">
+                    <a href="Condomínios">Condomínios</a>
+                    <a href="#Fórum">Fórum</a>
+                    <a href="Guia">Guia</a>
+                    <a href="#Artigos">Artigos</a>
+                    <a href="#Ferramentas">Ferramentas</a>
+                </div>
+                <div class="2">
+                    <a href="#Cotar Imóvel">Cotar Imóvel</a>
+                    <a href="#Planos">Planos</a>
+                    <a href="#entrar">Entrar</a>
+                    <a href="#cadastre-se" id="cadastrar-btn">CADASTRE-SE</a>
+                </div>
+            </nav>
+    
+            <nav class="navbar-mobile">
                 <a href="Condomínios">Condomínios</a>
                 <a href="#Fórum">Fórum</a>
                 <a href="Guia">Guia</a>
                 <a href="#Artigos">Artigos</a>
                 <a href="#Ferramentas">Ferramentas</a>
-            </div>
-            <div class="2">
                 <a href="#Cotar Imóvel">Cotar Imóvel</a>
                 <a href="#Planos">Planos</a>
                 <a href="#entrar">Entrar</a>
-                <a href="#cadastre-se" id="cadastrar-btn">CADASTRE-SE </a>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <div class="quadrado corretores">
-            <div class="corretor">
-                <div class="img-container">
-                    <img src="corretora.webp" alt="">
-                </div>
-                <div class="data-container">
-                    <h2>Nome Corretora</h2>
-                    <p>3.000 pontos</p>
-                    <a href="">ver telefone</a>
-                </div>
-            </div>
-            <div class="corretor">
-                <div class="img-container">
-                    <img src="corretor.jpeg" alt="">
-                </div>
-                <div class="data-container">
-                    <h2>Nome Corretora</h2>
-                    <p>3.000 pontos</p>
-                    <a href="">ver telefone</a>
-                </div>
-            </div>
-        </div>
-        <div class="quadrado">
-            <div id="mensagem">
-                <h2>Mande uma mensagem:</h2>
-                <form action="">
-                    <input type="text" id="cpf" placeholder="Digite seu CPF" autocomplete="off" maxlength="14">
-                    <input type="text" id="telefone" placeholder="Digite seu telefone" autocomplete="off"
-                        maxlength="14">
-                    <textarea name="" id="" placeholder="Digite o Assunto"></textarea>
-                    <button>Enviar mensagem</button>
-                </form>
-            </div>
-        </div>
-        <div class="quadrado">
-            <div id="regra-de-tres">
-                <h2>Regra de três</h2>
-                <div id="forms-regra-de-tres">
-                    <div class="input-group">
-                        <input type="text" placeholder="Valor 1">
-                        <div class="horizontal-line"></div>
-                        <input type="text" placeholder="Valor 2">
+                <a href="#cadastre-se" id="cadastrar-btn">CADASTRE-SE</a>
+            </nav>
+        </header>
+       <div class="container">
+            <div class="quadrado corretores">
+                <div class="corretor">
+                    <div class="img-container">
+                        <img src="corretora.webp" alt="">
                     </div>
-
-                    <div class="input-group">
-                        <input type="text" placeholder="Valor 3">
-                        <div class="horizontal-line"></div>
-                        <input type="text" placeholder="Valor 4">
+                    <div class="data-container">
+                        <h2>Nome Corretora</h2>
+                        <p>3.000 pontos</p>
+                        <a href="">ver telefone</a>
                     </div>
                 </div>
-                <button>Calcular</button>
+                <div class="corretor">
+                    <div class="img-container">
+                        <img src="corretor.jpeg" alt="">
+                    </div>
+                    <div class="data-container">
+                        <h2>Nome Corretora</h2>
+                        <p>3.000 pontos</p>
+                        <a href="">ver telefone</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="quadrado">4</div>
-        <div class="quadrado">5</div>
-        <div class="quadrado">6</div>
-    </div>
-    <script src="script.js"></script>
-</body>
+             <div class="quadrado">
+                <div id="mensagem">
+                    <h2>Mande uma mensagem:</h2>
+                    <form action="">
+                        <input type="text" id="cpf" placeholder="Digite seu CPF" autocomplete="off" maxlength="14">
+                        <input type="text" id="telefone" placeholder="Digite seu telefone" autocomplete="off"
+                            maxlength="14">
+                        <textarea name="" id="" placeholder="Digite o Assunto"></textarea>
+                        <button>Enviar mensagem</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="quadrado">
+                <div id="regra-de-tres">
+                    <h2>Regra de 3:</h2>
+                    <div id="forms-regra-de-tres">
+                        <div class="input-group">
+                            <input type="text" placeholder="Valor 1">
+                            <div class="horizontal-line"></div>
+                            <input type="text" placeholder="Valor 2">
+                        </div>
 
-</html>
+                        <div class="input-group">
+                            <input type="text" placeholder="Valor 3">
+                            <div class="horizontal-line"></div>
+                            <input type="text" placeholder="Valor 4">
+                        </div>
+                    </div>
+                    <button>Calcular</button>
+                </div>
+            </div>
+            
+            <div class="quadrado">4</div>
+            
+            <div class="quadrado">5</div>
+            <div class="quadrado">6</div> 
+        </div> 
+
+        
+        <script src="script.js"></script>
+    </body>
+
+    </html>
