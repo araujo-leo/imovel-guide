@@ -136,7 +136,7 @@ header img {
     font-weight: bold;
 }
 
-.corretores{
+.corretores {
     padding: 10px;
 }
 
@@ -176,13 +176,13 @@ header img {
     height: 100%;
 
     padding: 0 15px;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
 #mensagem h2 {
     font-size: 2.8rem;
     font-weight: 400;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 #mensagem input,
@@ -208,6 +208,7 @@ textarea::placeholder {
 #mensagem textarea {
     height: 10rem;
     margin-bottom: 2.5rem;
+    resize: none;
 }
 
 #mensagem button {
@@ -215,7 +216,62 @@ textarea::placeholder {
     padding: 10px;
     color: #fff;
     border-radius: 5px;
-    margin-top: auto; 
+    margin-top: auto;
     font-size: 1.8rem;
     line-height: 1.5rem;
+}
+
+#regra-de-tres {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px;
+}
+
+#regra-de-tres h2 {
+    font-size: 2.8rem;
+    color: var(--cor-principal);
+    margin-bottom: 20px;
+}
+
+#forms-regra-de-tres {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+
+#forms-regra-de-tres input {
+    width: 140px;
+    border: 1px solid var(--cor-terciaria);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#regra-de-tres button {
+    background-color: var(--cor-secundaria);
+    padding: 10px 20px; 
+    color: #fff;
+    border-radius: 5px;
+    margin-top: auto;
+    font-size: 1.8rem;
+    width: auto; 
+    line-height: 1.5rem;
+    align-self: flex-start; 
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.horizontal-line {
+    width: 40px;
+    height: 2px;
+    background-color: black;
 }
