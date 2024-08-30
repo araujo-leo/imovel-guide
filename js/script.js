@@ -2,31 +2,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputCPF = document.querySelector('#cpf');
     const inputTelefone = document.querySelector('#telefone');
 
-    inputCPF.addEventListener('keypress', () => {
-        let inputLenght = inputCPF.value.length;
-
-        if (inputLenght === 3 || inputLenght === 7) {
-            inputCPF.value += '.';
-        } else if (inputLenght === 11) {
-            inputCPF.value += '-';
+    inputCPF.addEventListener('input', () => {
+        let value = inputCPF.value.replace(/\D/g, '');
+    
+       
+        if (value.length > 9) {
+            value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{1})/, '$1.$2.$3-$4');
+        } else if (value.length > 6) {
+            value = value.replace(/(\d{3})(\d{3})(\d{1})/, '$1.$2.$3');
+        } else if (value.length > 3) {
+            value = value.replace(/(\d{3})(\d{1})/, '$1.$2');
         }
+    
+        inputCPF.value = value;
+    });
 
-    })
+    inputTelefone.addEventListener('input', () => {
 
-    inputTelefone.addEventListener('keypress', () => {
-        let inputLength = inputTelefone.value.length;
+        let value = inputTelefone.value.replace(/\D/g, '');
 
-        if (inputLength === 1) {
-            inputTelefone.value = '(' + inputTelefone.value;
+        if (value.length > 10) {
+            value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+        } else if (value.length > 5) {
+            value = value.replace(/(\d{2})(\d{5})/, '($1) $2');
+        } else if (value.length > 2) {
+            value = value.replace(/(\d{2})/, '($1');
         }
-
-        if (inputLength === 3) {
-            inputTelefone.value += ') ';
-        }
-
-        if (inputLength === 9) {
-            inputTelefone.value += '-';
-        }
+    
+        inputTelefone.value = value;
 
 
     });
