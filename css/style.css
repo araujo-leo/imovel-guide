@@ -103,15 +103,19 @@ header img {
     margin-left: 5rem;
     scale: 1;
     border: 2px solid #fff;
-    padding: 5px 200px;
     border-radius: 50px;
     background-color: transparent;
     color: var(--cor-principal);
-    transition: background-color 0.3s ease, color 0.3s ease;
     color: #fff;
     padding: 10px 15px;
+    transition: background-color 0.5s ease-in-out,  border 0.5s ease-in-out;
+    
 }
 
+#cadastrar-btn:hover{
+    background-color: var(--cor-secundaria);
+    border: 2px solid var(--cor-principal);
+}
 
 .container {
     display: flex;
