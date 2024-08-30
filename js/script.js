@@ -105,9 +105,22 @@ document.addEventListener('DOMContentLoaded', () => {
             modalImage.classList.remove('animate-zoom'); 
         }
     }
+
+
+   
 });
 
 
+
+
+function download_foto() {
+    html2canvas(document.querySelector("#foto-casa-download")).then(canvas => {
+        const a = document.createElement("a");
+        a.href = canvas.toDataURL("image/jpeg");
+        a.download = "image.jpeg";
+        a.click();
+    });
+}
 
 
 

@@ -123,14 +123,14 @@
 
 
         <div class="quadrado-casa-download">
-            <div id="foto-casa">
-                <img src="img/casa.jpeg">
-<!--                 <button>Imovel Guide</button>
- -->            </div>
-            <button id="abrirModal" class="botao-abrir-modal">Download</button>
+            <div id="foto-casa-download">
+                <img src="img/casa.jpeg" crossOrigin="anonymous">
+                <button>Imovel Guide</button>
+            </div>
+            <button id="abrirModal" class="botao-abrir-modal" onclick="download_foto()">Download</button>
         </div>
 
-        <div class="quadrado">6</div>
+        <div class="quadrado"></div>
     </div>
 
     <footer class="footer">
@@ -146,6 +146,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
