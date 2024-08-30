@@ -497,7 +497,7 @@ textarea::placeholder {
 .modal {
     display: none;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     left: 0;
     top: 0;
     width: 100%;
@@ -714,6 +714,10 @@ textarea::placeholder {
         padding: 0;
         margin: 10px;
     }
+
+    .modal-conteudo{
+        height: 60%;
+    }
 }
 
 @media (max-width: 481px) {
@@ -727,5 +731,9 @@ textarea::placeholder {
 
     .quadrado-casa-animada {
         margin: 20px 10px;
+    }
+
+    .modal-conteudo{
+        height: 40%;
     }
 }
