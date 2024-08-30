@@ -391,7 +391,7 @@ textarea::placeholder {
 }
 
 .quadrado-casa-animada img{
-    animation: zoomOut 2s ease-out;
+    animation: zoomOut 10s ease-out;
  
 }
 
