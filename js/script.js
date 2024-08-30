@@ -107,6 +107,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    const telCorretora = document.querySelector('#telCorretora');
+    const telCorretor = document.querySelector('#telCorretor');
+
+    telCorretora.addEventListener('click', ()=>{
+        event.preventDefault();
+        telCorretora.textContent = "(11) 99999-9999";
+    })
+
+    telCorretor.addEventListener('click', ()=>{
+        event.preventDefault();
+        telCorretor.textContent = "(11) 99999-9999";
+    })
+
+
+
    
 });
 
