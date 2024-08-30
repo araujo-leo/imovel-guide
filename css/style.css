@@ -278,7 +278,9 @@ textarea::placeholder {
     background-color: black;
 }
 
-#foto-casa, #foto-casa-download {
+#foto-casa,
+#foto-casa-download,
+#casa-animada {
     position: relative;
     width: 100%;
     height: 380px;
@@ -286,12 +288,19 @@ textarea::placeholder {
     border-radius: 5px;
 }
 
-#foto-casa img, #foto-casa-download img {
+#foto-casa img,
+#foto-casa-download img,
+#casa-animada img {
     width: 100%;
     height: 380px;
     border-radius: 5px;
 
 }
+
+
+
+
+
 
 .quadrado-casa {
     background-color: #FFF;
@@ -351,18 +360,40 @@ textarea::placeholder {
     font-weight: 400;
 }
 
-#foto-casa button, #foto-casa-download button {
+#foto-casa button,
+#foto-casa-download button {
     height: 40px;
     width: 320px;
     position: absolute;
-    left: 50%; 
+    left: 50%;
     bottom: 10px;
     z-index: 1;
     background-color: #cb4700;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
 }
 
 
+.quadrado-casa-animada {
+    background-color: #FFF;
+    border: 1.5px solid var(--cor-terciaria);
+    border-radius: 5px;
+    width: 380px;
+    height: 380px;
+    margin: 80px 40px 0 40px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.quadrado-casa-animada img{
+    animation: zoomOut 2s ease-out;
+ 
+}
 
 .footer {
     background-color: var(--cor-principal);
@@ -441,10 +472,11 @@ textarea::placeholder {
 
 @keyframes zoomOut {
     0% {
-        transform: scale(1.5); 
+        transform: scale(1.5);
     }
+
     100% {
-        transform: scale(1); 
+        transform: scale(1);
     }
 }
 
@@ -465,8 +497,7 @@ textarea::placeholder {
 .modal-body img {
     width: 40svw;
     border-radius: 5px;
-    animation: zoomOut 2s ease-out;
-    position: absolute; 
+    position: absolute;
 }
 
 .fechar {
@@ -483,17 +514,18 @@ textarea::placeholder {
     cursor: pointer;
 }
 
-#close-icon{
+#close-icon {
     font-size: 4rem;
 }
 
-#close-icon, #menu-icon{
+#close-icon,
+#menu-icon {
     display: none;
 }
 
 .navbar-mobile {
     z-index: -1;
-    display: none; 
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -553,7 +585,7 @@ textarea::placeholder {
     }
 
     .quadrado-casa-download {
-        margin: 30px 0 0 0 ;
+        margin: 30px 0 0 0;
         padding: 5px;
     }
 
@@ -589,19 +621,18 @@ textarea::placeholder {
         height: 100svh;
     }
 
-    .modal-conteudo{
+    .modal-conteudo {
         margin-top: 20rem;
         height: 40svh;
     }
 
-    .modal-body{
+    .modal-body {
         width: 60svw;
     }
 
-    .modal-body img{
+    .modal-body img {
         width: 70svw;
         border-radius: 5px;
     }
 
 }
-
