@@ -8,7 +8,7 @@
 ## Instruções para Configuração Local
 ### Requisitos
 
-1. Servidor Local (por exemplo Apache, Nginx ou similar)
+1. Servidor Local (por exemplo Live server, Apache, Nginx ou similar)
 2. Conexão com Internet
    
 ## Passo 1: Rodar o Projeto
