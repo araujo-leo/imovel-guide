@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     inputCPF.addEventListener('keypress', () => {
         let inputLenght = inputCPF.value.length;
 
-        console.log(inputLenght);
-
         if (inputLenght === 3 || inputLenght === 7) {
             inputCPF.value += '.';
         } else if (inputLenght === 11) {
@@ -140,3 +138,19 @@ function download_foto() {
 
 
 
+const formMensagem = document.querySelector('#form-mensagem');
+
+formMensagem.addEventListener('submit', ()=>{
+    event.preventDefault();
+
+    const CPF = document.querySelector('#cpf').value;
+    const telefone = document.querySelector('#telefone').value;
+    const mensagem = document.querySelector('#mensagemArea').value;
+
+    if(CPF.length < 14 || telefone.length < 14 || mensagem.length == 0){
+        alert("Por favor, preencha os campos requisitados!");
+    }else{
+        alert("Mensagem enviada com sucesso!");
+    }
+   
+})
