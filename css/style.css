@@ -130,11 +130,11 @@ header img {
     color: var(--cor-principal);
     color: #fff;
     padding: 10px 15px;
-    transition: background-color 0.5s ease-in-out,  border 0.5s ease-in-out;
-    
+    transition: background-color 0.5s ease-in-out, border 0.5s ease-in-out;
+
 }
 
-#cadastrar-btn:hover{
+#cadastrar-btn:hover {
     background-color: var(--cor-secundaria);
     border: 2px solid var(--cor-principal);
 }
@@ -442,9 +442,9 @@ textarea::placeholder {
     overflow: hidden;
 }
 
-.quadrado-casa-animada img{
+.quadrado-casa-animada img {
     animation: zoomOut 10s ease-out;
- 
+
 }
 
 .footer {
@@ -604,7 +604,7 @@ textarea::placeholder {
         cursor: pointer;
     }
 
-    .navbar-mobile{
+    .navbar-mobile {
         font-size: 1.8rem;
     }
 
@@ -623,6 +623,16 @@ textarea::placeholder {
 
     #cadastrar-btn {
         margin: 0;
+    }
+
+
+    .quadrado-casa-download {
+        margin: 0px;
+        padding: 5px;
+    }
+
+    .quadrado-casa-animada {
+        margin: 20px 0;
     }
 }
 
@@ -692,4 +702,30 @@ textarea::placeholder {
         border-radius: 5px;
     }
 
+}
+
+@media (max-width: 768px) {
+    .quadrado-casa {
+        padding: 0;
+        margin: 20px;
+    }
+
+    .quadrado-casa-download {
+        padding: 0;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 481px) {
+    .quadrado-casa{
+        margin: 10px;
+    }
+
+    .quadrado-casa button {
+        width: 350px;
+    }
+
+    .quadrado-casa-animada {
+        margin: 20px 10px;
+    }
 }
